@@ -65,7 +65,7 @@ void base64Encode(char *str,char *outPutStr)
 		index = index|(str[loopNum+1]>>4);
 		outPutStr[tempCnt++] = data[index];
 
-		index = outPutStr[loopNum+1]&0x0f;
+		index = str[loopNum+1]&0x0f;
 		index = index<<2;
 		outPutStr[tempCnt++] = data[index];
 		outPutStr[tempCnt++] = '=';
